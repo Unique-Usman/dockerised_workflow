@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVIM-MRI Pipeline</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <img src="../static/img/logo.svg" alt="IVIM-MRI Pipeline Logo">
+                <h1>IVIM-MRI Pipeline</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-tasks"></i> Jobs</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <div class="welcome-section">
+                    <h2>Welcome to IVIM-MRI Pipeline</h2>
+                    <p>A robust, containerized pipeline for processing medical imaging data.</p>
+                    <button class="btn-primary"><i class="fas fa-play"></i> Quick Start</button>
+                </div>
+
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon blue">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Upload Data</h3>
+                            <p>Upload NIfTI, BVAL, and BVEC files for processing</p>
+                            <div class="file-upload">
+                                <input type="file" id="file-upload" multiple hidden>
+                                <label for="file-upload" class="btn-secondary">Select Files</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon purple">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Configure Pipeline</h3>
+                            <p>Set up your processing parameters</p>
+                            <div class="pipeline-config">
+                                <div class="config-item">
+                                    <label for="algorithm">Algorithm:</label>
+                                    <select id="algorithm">
+                                        <option value="OJ_GU_seg">Segmented Fitting (OJ_GU_seg)</option>
+                                        <option value="biexp">Bi-Exponential Fitting</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon green">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Run Analysis</h3>
+                            <p>Process your data with the configured pipeline</p>
+                            <button class="btn-primary">Start Processing</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon orange">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Results Visualization</h3>
+                            <p>View and analyze processed images</p>
+                            <div class="results-preview">
+                                <div class="placeholder-image">
+                                    <i class="fas fa-image"></i>
+                                    <p>No results available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <h3>Processing Status</h3>
+                <div class="status-item">
+                    <div class="status-icon pending">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="status-details">
+                        <p class="status-name">Waiting for input...</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IVIM-MRI Pipeline. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
